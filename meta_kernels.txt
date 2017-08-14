@@ -1,0 +1,18 @@
+# The meta kernel file contains entries pointing to the following SPICE kernels, which the user needs to download.
+# Leapseconds
+#wget https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/naif0012.tls
+# Planetary ephemeris
+#wget https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de432s.bsp
+# Planet orientation and radii
+#wget https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/pck00010.tpc
+#
+#   The following is the contents of a metakernel that was saved with
+#   the name 'meta_kernals.txt'.
+\begindata
+KERNELS_TO_LOAD=(
+'kernels/naif0012.tls',
+'kernels/de432s.bsp',
+'kernels/pck00010.tpc')
+\begintext
+
+#spice.furnsh("./meta_kernels.txt")
